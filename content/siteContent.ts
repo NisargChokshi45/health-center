@@ -1,10 +1,15 @@
-// PLACEHOLDER COPY. The live site (ultimatehealth.in) could not be read from the
-// build environment, so every string below except the brand and tagline is a
-// stand-in. Replace these values with the real copy; components read only from here.
+// Site copy. Empty values render nothing, so no invented text reaches the page.
+// Fill these from the live site once its pages are available.
+
+export interface NavItem {
+  label: string;
+  href: string;
+}
 
 export interface ServiceItem {
   title: string;
   description: string;
+  href: string;
 }
 
 export const siteContent = {
@@ -13,38 +18,26 @@ export const siteContent = {
     subname: 'HEALTH',
     trademark: '™',
     tagline: 'PHYSIOTHERAPY | FITNESS | REHAB',
+    logoSrc: '',
   },
   nav: [
     { label: 'Services', href: '#services' },
     { label: 'Contact', href: '#contact' },
-  ],
+  ] satisfies NavItem[],
   hero: {
-    headline: '[Placeholder headline]',
-    body: '[Placeholder intro paragraph. Replace with the homepage copy from ultimatehealth.in.]',
-    primaryCta: { label: 'Book a consultation', href: '#contact' },
+    headline: '',
+    body: '',
+    primaryCta: { label: '', href: '#contact' },
   },
   services: {
-    heading: 'Our services',
-    items: [
-      {
-        title: 'Physiotherapy',
-        description: '[Placeholder description for physiotherapy.]',
-      },
-      {
-        title: 'Fitness',
-        description: '[Placeholder description for fitness.]',
-      },
-      {
-        title: 'Rehab',
-        description: '[Placeholder description for rehabilitation.]',
-      },
-    ] satisfies ServiceItem[],
+    heading: '',
+    items: [] as ServiceItem[],
   },
   contact: {
-    heading: 'Get in touch',
-    body: '[Placeholder contact intro.]',
-    phone: '[Phone number]',
-    email: '[Email address]',
-    address: '[Clinic address]',
+    heading: '',
+    body: '',
+    phone: '',
+    email: '',
+    address: '',
   },
 } as const;
