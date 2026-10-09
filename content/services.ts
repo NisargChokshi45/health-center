@@ -3,6 +3,7 @@
 export interface ServiceContent {
   slug: string;
   title: string;
+  image: string;
   summary: string;
   overview: string;
   approach: readonly string[];
@@ -11,6 +12,7 @@ export interface ServiceContent {
 export const services: readonly ServiceContent[] = [
   {
     slug: 'slimming-body-contouring',
+    image: 'https://ultimatehealth.in/upload/program/afd7dcfc55a035af2705cd915c7e7566.webp',
     title: 'Slimming & Body Contouring',
     summary: 'Non-invasive treatments that target stubborn fat and help you reshape your figure.',
     overview:
@@ -23,6 +25,7 @@ export const services: readonly ServiceContent[] = [
   },
   {
     slug: 'knee-rehabilitation',
+    image: 'https://ultimatehealth.in/upload/program/629effdf19b16983c04e2f4f8ce361ad.webp',
     title: 'Knee Rehabilitation',
     summary: 'Structured recovery after injury or surgery, and long-term care for conditions such as arthritis.',
     overview:
@@ -35,6 +38,7 @@ export const services: readonly ServiceContent[] = [
   },
   {
     slug: 'weight-management-programs',
+    image: 'https://ultimatehealth.in/upload/program/29c16bad9bb36797da39c8c2dcef5745.webp',
     title: 'Weight Management Programs',
     summary: 'Personalised exercise, diet and lifestyle plans for steady weight loss or healthy weight gain.',
     overview:
@@ -47,6 +51,7 @@ export const services: readonly ServiceContent[] = [
   },
   {
     slug: 'hip-rehabilitation',
+    image: 'https://ultimatehealth.in/upload/program/e6c89cf660392d8059bbeb2810d8da18.webp',
     title: 'Hip Rehabilitation',
     summary: 'Rebuild hip strength, stability and flexibility through hands-on therapy and guided exercise.',
     overview:

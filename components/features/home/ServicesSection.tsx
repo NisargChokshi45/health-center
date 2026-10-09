@@ -21,7 +21,12 @@ export default function ServicesSection(): ReactNode {
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
           {services.map((service, index) => (
             <li key={service.slug} className="flex flex-col overflow-hidden rounded-2xl border border-line bg-page transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-blue/10">
-              <ImagePlaceholder label={service.title} tone={tones[index % tones.length]} className="h-40" />
+              <ImagePlaceholder
+                label={service.title}
+                src={service.image}
+                tone={tones[index % tones.length]}
+                className="h-40"
+              />
               <div className="flex flex-1 flex-col p-6">
                 <h3 className="text-xl font-semibold">{service.title}</h3>
                 <p className="mt-3 flex-1 text-muted">{service.summary}</p>

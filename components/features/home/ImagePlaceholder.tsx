@@ -10,12 +10,17 @@ const toneClasses: Record<PlaceholderTone, string> = {
 
 interface ImagePlaceholderProps {
   label: string;
+  src?: string;
   tone?: PlaceholderTone;
   className?: string;
 }
 
-// Stands in for a photo until the real image is added. Swap for next/image when assets are available.
-export default function ImagePlaceholder({ label, tone = 'blue', className = '' }: ImagePlaceholderProps): ReactNode {
+// Shows the linked site photo when `src` is set. Otherwise a brand-coloured block stands in until a photo is available.
+export default function ImagePlaceholder({ label, src, tone = 'blue', className = '' }: ImagePlaceholderProps): ReactNode {
+  if (src) {
+    return <img src={src} alt={label} loading="lazy" className={`w-full object-cover ${className}`} />;
+  }
+
   return (
     <div
       role="img"

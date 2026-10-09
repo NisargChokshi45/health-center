@@ -43,7 +43,12 @@ export default async function ServiceDetailPage({ params }: ServiceRouteProps): 
         <h1 className="mt-6 text-4xl font-semibold leading-tight sm:text-5xl">{service.title}</h1>
         <p className="mt-4 text-lg text-muted">{service.summary}</p>
 
-        <ImagePlaceholder label={service.title} tone="blue" className="mt-10 aspect-[16/9] rounded-lg" />
+        <ImagePlaceholder
+          label={service.title}
+          src={service.image}
+          tone="blue"
+          className="mt-10 aspect-[16/9] rounded-2xl object-cover"
+        />
 
         <section className="mt-12">
           <h2 className="text-2xl font-semibold">Overview</h2>

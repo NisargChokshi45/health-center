@@ -28,12 +28,12 @@ export default function TeamSection(): ReactNode {
             key={member.name}
             className="flex flex-col items-center rounded-2xl border border-line bg-surface p-6 text-center transition duration-300 hover:-translate-y-1"
           >
-            <span
-              aria-hidden="true"
-              className="flex h-28 w-28 items-center justify-center rounded-full bg-brand-blue text-2xl font-bold text-on-blue"
-            >
-              {initialsOf(member.name)}
-            </span>
+            <img
+              src={member.image}
+              alt={member.name}
+              loading="lazy"
+              className="h-28 w-28 rounded-full object-cover"
+            />
             <h3 className="mt-5 text-lg font-semibold">{member.name}</h3>
             <p className="mt-1 text-sm text-muted">{member.role}</p>
           </li>

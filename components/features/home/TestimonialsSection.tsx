@@ -30,12 +30,12 @@ export default function TestimonialsSection(): ReactNode {
                 <p>{item.quote}</p>
               </blockquote>
               <div className="mt-6 flex items-center gap-4 border-t border-line pt-6">
-                <span
-                  aria-hidden="true"
-                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-coral font-bold text-on-coral"
-                >
-                  {initialsOf(item.name)}
-                </span>
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  loading="lazy"
+                  className="h-12 w-12 shrink-0 rounded-full object-cover"
+                />
                 <div>
                   <p className="font-semibold">{item.name}</p>
                   <p className="text-sm text-link">{item.condition}</p>

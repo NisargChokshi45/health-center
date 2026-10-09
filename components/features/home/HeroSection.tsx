@@ -25,7 +25,12 @@ export default function HeroSection(): ReactNode {
           </a>
         </div>
       </div>
-      <ImagePlaceholder label="Modern medical facility" tone="blue" className="aspect-[4/3] rounded-3xl shadow-2xl shadow-brand-blue/20" />
+      <ImagePlaceholder
+        label="Modern medical facility"
+        src={siteContent.hero.imageSrc}
+        tone="blue"
+        className="aspect-[4/3] rounded-3xl object-cover shadow-2xl shadow-brand-blue/20"
+      />
     </section>
   );
 }
