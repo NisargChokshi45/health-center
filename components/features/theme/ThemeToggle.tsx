@@ -14,7 +14,8 @@ export default function ThemeToggle(): ReactNode {
       aria-label={`Switch to ${nextTheme} theme`}
       className="rounded-full border border-line bg-surface px-3 py-1.5 text-sm font-medium text-ink transition-colors hover:border-brand-blue"
     >
-      {theme === 'light' ? 'Dark mode' : 'Light mode'}
+      <span className="sm:hidden">{theme === 'light' ? 'Dark' : 'Light'}</span>
+      <span className="hidden sm:inline">{theme === 'light' ? 'Dark mode' : 'Light mode'}</span>
     </button>
   );
 }

@@ -13,13 +13,14 @@ export async function sendEnquiry(values: ContactFormValues): Promise<void> {
     from,
     to,
     replyTo: values.email,
-    subject: `New website enquiry from ${values.name}`,
+    subject: `New appointment request from ${values.name}`,
     text: [
       `Name: ${values.name}`,
-      `Phone: ${values.phone}`,
+      `Mobile: ${values.phone}`,
       `Email: ${values.email}`,
+      `Service: ${values.service}`,
       '',
-      values.message,
+      values.message || '(no message)',
     ].join('\n'),
   });
 }

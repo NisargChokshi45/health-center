@@ -18,7 +18,7 @@ export function useContactForm(): {
 } {
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
-    defaultValues: { name: '', phone: '', email: '', message: '' },
+    defaultValues: { name: '', phone: '', email: '', service: '', message: '' },
   });
   const [status, setStatus] = useState<ContactSubmitStatus>('idle');
 

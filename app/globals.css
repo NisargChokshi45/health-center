@@ -1,42 +1,52 @@
 @import 'tailwindcss';
 
-/* Palette sampled from the Ultimate Health logo: coral, blue, lilac, charcoal on light grey. */
+/*
+ * Palette sampled from the Ultimate Health logo. Only these colours are used:
+ *   grey #e6e6e6, charcoal #2b2a28, blue #006ec7, lilac #ecbcfa, coral #ff6867.
+ * Surfaces, borders and muted text are tints of grey and charcoal, so no new hues appear.
+ */
 :root {
   --app-bg: #e6e6e6;
-  --app-surface: #f3f3f3;
-  --app-text: #2b2b2b;
-  --app-muted: #5a5a5a;
-  --app-border: #cdcdcd;
-  --app-blue: #0b6bc6;
-  --app-coral: #ef5f5a;
-  --app-lilac: #e9b9f5;
-  --app-on-accent: #ffffff;
+  --app-surface: color-mix(in srgb, #2b2a28 6%, #e6e6e6);
+  --app-text: #2b2a28;
+  --app-muted: color-mix(in srgb, #2b2a28 72%, #e6e6e6);
+  --app-border: color-mix(in srgb, #2b2a28 22%, #e6e6e6);
+  --app-blue: #006ec7;
+  --app-link: #006ec7;
+  --app-coral: #ff6867;
+  --app-lilac: #ecbcfa;
+  --app-on-blue: #e6e6e6;
+  --app-on-coral: #2b2a28;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --app-bg: #101216;
-    --app-surface: #181b21;
-    --app-text: #ececec;
-    --app-muted: #a3a7b0;
-    --app-border: #2a2e36;
-    --app-blue: #3d8fe6;
-    --app-coral: #ff7b75;
-    --app-lilac: #d7a6ee;
-    --app-on-accent: #0b0c0f;
+    --app-bg: #2b2a28;
+    --app-surface: color-mix(in srgb, #e6e6e6 7%, #2b2a28);
+    --app-text: #e6e6e6;
+    --app-muted: color-mix(in srgb, #e6e6e6 72%, #2b2a28);
+    --app-border: color-mix(in srgb, #e6e6e6 22%, #2b2a28);
+    --app-blue: #006ec7;
+    --app-link: #ecbcfa;
+    --app-coral: #ff6867;
+    --app-lilac: #ecbcfa;
+    --app-on-blue: #e6e6e6;
+    --app-on-coral: #2b2a28;
   }
 }
 
 :root[data-theme='dark'] {
-  --app-bg: #101216;
-  --app-surface: #181b21;
-  --app-text: #ececec;
-  --app-muted: #a3a7b0;
-  --app-border: #2a2e36;
-  --app-blue: #3d8fe6;
-  --app-coral: #ff7b75;
-  --app-lilac: #d7a6ee;
-  --app-on-accent: #0b0c0f;
+  --app-bg: #2b2a28;
+  --app-surface: color-mix(in srgb, #e6e6e6 7%, #2b2a28);
+  --app-text: #e6e6e6;
+  --app-muted: color-mix(in srgb, #e6e6e6 72%, #2b2a28);
+  --app-border: color-mix(in srgb, #e6e6e6 22%, #2b2a28);
+  --app-blue: #006ec7;
+  --app-link: #ecbcfa;
+  --app-coral: #ff6867;
+  --app-lilac: #ecbcfa;
+  --app-on-blue: #e6e6e6;
+  --app-on-coral: #2b2a28;
 }
 
 @theme inline {
@@ -45,10 +55,12 @@
   --color-ink: var(--app-text);
   --color-muted: var(--app-muted);
   --color-line: var(--app-border);
+  --color-link: var(--app-link);
   --color-brand-blue: var(--app-blue);
   --color-brand-coral: var(--app-coral);
   --color-brand-lilac: var(--app-lilac);
-  --color-on-accent: var(--app-on-accent);
+  --color-on-blue: var(--app-on-blue);
+  --color-on-coral: var(--app-on-coral);
 }
 
 html {
